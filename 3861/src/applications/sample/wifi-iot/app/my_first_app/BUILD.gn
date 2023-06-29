@@ -1,0 +1,9 @@
+static_library("myapp"){        #指定业务模块的编译结果，为静态库文件
+    sources = [
+        "hello_world.c",        #指定静态库文件.a包含的.c文件及其路径
+    ]
+
+    include_dirs = [
+       "//base/iot_hardware/peripheral/interfaces/kits",     #指定source中依赖的头文件路径
+    ]
+}
