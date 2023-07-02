@@ -11,6 +11,6 @@ huks_mbedtls_path =
     "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/mbedtls/include/"
 enable_ohos_startup_syspara_lite_use_thirdparty_mbedtls = false
 ohos_build_type = "debug"
-ohos_build_time = "1688107163815"
-ohos_build_datetime = "2023-06-30 22:39:23"
+ohos_build_time = "1688241843901"
+ohos_build_datetime = "2023-07-02 12:04:03"
 ohos_full_compile = true

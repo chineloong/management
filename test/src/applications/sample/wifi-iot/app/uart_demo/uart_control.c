@@ -30,14 +30,12 @@
 #define U_SLEEP_TIME   100000
 
 char uartReadBuff[1];
-char Serial_RxPacket1[100];
+char Serial_RxPacket[100];
 int done_flag = 0;
-
-int *get_data = Serial_RxPacket1;
-int size;
 
 uint32_t Serial_RxFlag = 0;
 
+int complete_flag = 0;
 
 void Uart1GpioInit(void)
 {
@@ -87,7 +85,6 @@ static void UartTask(void)
         Serial_RxFlag = IoTUartRead(HI_UART_IDX_1, uartReadBuff, UART_BUFF_SIZE);
         if (Serial_RxFlag > 0) {
             // 把接收到的数据打印出来 Print the received data
-            printf("Uart Read Data is: [ %d ] %s \r\n", count,  uartReadBuff);
         
         // 通过UART1 接收数据 Receive data through UART1
         
@@ -95,30 +92,29 @@ static void UartTask(void)
             // printf("Uart Read Data is: [ %d ] %s \r\n", count, uartReadBuff);
             
             if(*uartReadBuff == '$' && rx_flag == 0){
-                printf("goodj\n");
+                printf("start\n");
                 num = 0;
                 rx_flag = 1;
-                done_flag =0;
                 }
-            else if(rx_flag == 1){
+            if(rx_flag == 1){
                 if(*uartReadBuff == '\r'){
                     rx_flag = 2;
                     }
                 else{
-                    Serial_RxPacket1[num] = *uartReadBuff;
+                    Serial_RxPacket[num] = *uartReadBuff;
+                    // printf("Uart Read Data is: [ %d ] %s \r\n", count,  uartReadBuff);
                     num++;
                     count++;
-                    printf("helloworld\n");
                      }
                 }
             else if(rx_flag == 2 && *uartReadBuff == '\n'){
 				rx_flag = 0;
-                Serial_RxPacket1[num] = '\0';
+                Serial_RxPacket[num] = '\0';
                 count++;
                 printf("done\n");
-                done_flag = 1;
+                complete_flag = 1;
                 usleep(U_SLEEP_TIME);
-                size = sizeof(Serial_RxPacket1)/sizeof(Serial_RxPacket1[0]);
+                // printf("%s",Serial_RxPacket);
             //     int i;
             // for(i=0;i<count;i++){
             //     printf('%s',Serial_RxPacket[i]);
