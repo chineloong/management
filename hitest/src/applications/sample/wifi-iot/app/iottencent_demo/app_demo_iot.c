@@ -25,6 +25,29 @@
 #include "iot_profile.h"
 #include "ohos_init.h"
 #include "cmsis_os2.h"
+#include "GPS.h"
+#include <stdio.h>
+#include <unistd.h>
+#include <string.h>
+#include <stdint.h>
+
+#include "iot_gpio_ex.h"
+#include "ohos_init.h"
+#include "cmsis_os2.h"
+#include "iot_gpio.h"
+#include "iot_uart.h"
+#include "hi_uart.h"
+#include "iot_watchdog.h"
+#include "iot_errno.h"
+#include "GPS.h"
+#include <stdlib.h>
+#include "stdarg.h"
+#include "math.h"
+#include <unistd.h>
+
+#include "iot_gpio_ex.h"
+#include "ohos_init.h"
+#include "cmsis_os2.h"
 
 /* attribute initiative to report */
 #define TAKE_THE_INITIATIVE_TO_REPORT
@@ -49,16 +72,6 @@ typedef struct FunctionCallback {
     FnMsgCallBack    msgCallBack;
 }FunctionCallback;
 FunctionCallback g_functinoCallback;
-
-//延时设置
-/* CPU Sleep time Set */
-unsigned int TaskMsleep(unsigned int ms)
-{
-    if (ms <= 0) {
-        return HI_ERR_FAILURE;
-    }
-    return hi_sleep((hi_u32)ms);
-}
 
 static void DeviceConfigInit(hi_gpio_value val)
 {   
@@ -123,7 +136,17 @@ hi_void IotPublishSample(void)
         /* report light_intensity */
         .reportAction.subDeviceActionLightIntensity = "light_intensity",
         .reportAction.lightIntensityActionData = 60, /* 60 : light_intensity */
+        //GPS
+        
+      
     };
+    printf("纬度是%f\n",GPSdata.latitude);
+    printf("经度是%f\n",GPSdata.longitude);
+
+    weChatProfile.reportAction.subDeviceActionLatitude = "latitude";
+    weChatProfile.reportAction.latitude = GPSdata.latitude;
+    weChatProfile.reportAction.subDeviceActionLongitude = "longitude";
+    weChatProfile.reportAction.longitude = GPSdata.longitude;
 
     /* report light */
     if (g_ligthStatus == HI_TRUE) {
@@ -179,7 +202,7 @@ static void AppDemoIot(void)
     attr.cb_size = 0U;
     attr.stack_mem = NULL;
     attr.stack_size = CN_IOT_TASK_STACKSIZE;
-    attr.priority = CN_IOT_TASK_PRIOR;
+    attr.priority = osPriorityNormal5;
 
     if (osThreadNew((osThreadFunc_t)DemoEntry, NULL, &attr) == NULL) {
         printf("[mqtt] Falied to create IOTDEMO!\n");

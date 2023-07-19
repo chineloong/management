@@ -20,6 +20,9 @@ static_library("appDemoIot") {
     "iot_main.c",
     "iot_profile.c",
     "iot_sta.c",
+    "hal_iot_gpio_ex.c",
+    "uart_control.c",
+    "GPS.c",
   ]
 
   include_dirs = [
@@ -33,6 +36,11 @@ static_library("appDemoIot") {
     "//foundation/communication/wifi_lite/interfaces/wifiservice",
     "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/paho.mqtt.c/include/mqtt",
     "//device/hisilicon/hispark_pegasus/sdk_liteos/third_party/libcoap/include/coap2",
+    "./",
+    "//utils/native/lite/include",
+    "//kernel/liteos_m/kal/cmsis",
+    "//base/iot_hardware/peripheral/interfaces/kits",
+    "//device/soc/hisilicon/hi3861v100/sdk_liteos/include/base",
   ]
 
   defines = [ "WITH_LWIP" ]

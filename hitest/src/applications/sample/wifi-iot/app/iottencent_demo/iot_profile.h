@@ -72,11 +72,16 @@ typedef struct {
     int temperatureData;
     int humidityActionData;
     int lightIntensityActionData;
+    double latitude;
+    double longitude;
     const char *subDeviceActionLight;
     const char *subDeviceActionMotor;
     const char *subDeviceActionTemperature;
     const char *subDeviceActionHumidity;
     const char *subDeviceActionLightIntensity;
+    const char *subDeviceActionLatitude;
+    const char *subDeviceActionLongitude;
+    
 }WeChatProfileReporte;
 
 typedef struct {

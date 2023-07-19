@@ -1,10 +1,10 @@
 ohos_build_compiler: gcc
 hks_config_lite.h
-Done. Made 77 targets from 70 files in 194ms
+Done. Made 77 targets from 70 files in 227ms
 ninja: Entering directory `D:\hispark\hitest\src\out\hispark_pegasus\wifiiot_hispark_pegasus'
-[1/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_hmac.o
-[2/334] gcc cross compiler obj/base/hiviewdfx/hilog_lite/frameworks/mini/libhilog_lite.hiview_log_limit.o
-[3/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.cjson_init.o
+[1/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.hal_iot_gpio_ex.o
+[2/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_hmac.o
+[3/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.cjson_init.o
 ../../../applications/sample/wifi-iot/app/iottencent_demo/cjson_init.c: In function 'cJsonFree':
 ../../../applications/sample/wifi-iot/app/iottencent_demo/cjson_init.c:27:16: warning: passing argument 2 of 'hi_free' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
      hi_free(0, p);
@@ -17,7 +17,7 @@ In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/
 ../../../applications/sample/wifi-iot/app/iottencent_demo/cjson_init.c:34:19: warning: assignment from incompatible pointer type [-Wincompatible-pointer-types]
      hooks.free_fn = cJsonFree;
                    ^
-[4/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_log.o
+[4/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_log.o
 In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.c:16:0:
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:116:0: warning: "IOT_LOG_TRACE" redefined
  #define IOT_LOG_TRACE(fmt, ...)   IOT_LOG(EN_IOT_LOG_LEVEL_TRACE, fmt, ##__VA_ARGS__)
@@ -25,53 +25,7 @@ In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:112:0: note: this is the location of the previous definition
  #define IOT_LOG_TRACE(fmt, ...)
  
-[5/334] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_config.o
-[6/334] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_service.o
-[7/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.app_demo_iot.o
-In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:23:0:
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:116:0: warning: "IOT_LOG_TRACE" redefined
- #define IOT_LOG_TRACE(fmt, ...)   IOT_LOG(EN_IOT_LOG_LEVEL_TRACE, fmt, ##__VA_ARGS__)
- 
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:92:0: note: this is the location of the previous definition
- #define IOT_LOG_TRACE(fmt, ...) \
- 
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c: In function 'DemoMsgRcvCallBack':
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:79:9: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
-         printf(fmt, ##__VA_ARGS__); \
-         ^
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:88:9: note: in expansion of macro 'IOT_PRINT'
-         IOT_PRINT("[%s][%s] " fmt "\r\n", \
-         ^~~~~~~~~
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:106:13: note: in expansion of macro 'IOT_LOG'
-             IOT_LOG(EN_IOT_LOG_LEVEL_DEBUG, fmt, ##__VA_ARGS__); \
-             ^~~~~~~
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:81:5: note: in expansion of macro 'IOT_LOG_DEBUG'
-     IOT_LOG_DEBUG("RCVMSG:QOS:%d TOPIC:%s PAYLOAD:%s\r\n", qos, topic, payload);
-     ^~~~~~~~~~~~~
-In file included from ../../../device/hisilicon/hispark_pegasus/sdk_liteos/include/hi_task.h:25:0,
-                 from ../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:16:
-../../../device/hisilicon/hispark_pegasus/sdk_liteos/include/hi_types_base.h:291:20: warning: 'return' with a value, in function returning void
- #define HI_NULL    ((void *)0)
-                    ^
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:92:12: note: in expansion of macro 'HI_NULL'
-     return HI_NULL;
-            ^~~~~~~
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:79:13: note: declared here
- static void DemoMsgRcvCallBack(int qos, const char *topic, const char *payload)
-             ^~~~~~~~~~~~~~~~~~
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c: In function 'DemoEntry':
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:136:39: warning: unused parameter 'arg' [-Wunused-parameter]
- static hi_void *DemoEntry(const char *arg)
-                                       ^~~
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c: In function 'AppDemoIot':
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:163:5: warning: implicit declaration of function 'IoTWatchDogDisable' [-Wimplicit-function-declaration]
-     IoTWatchDogDisable();
-     ^~~~~~~~~~~~~~~~~~
-At top level:
-../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:66:13: warning: 'DeviceMsgCallback' defined but not used [-Wunused-function]
- static int  DeviceMsgCallback(FnMsgCallBack msgCallBack)
-             ^~~~~~~~~~~~~~~~~
-[8/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_profile.o
+[5/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_profile.o
 In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c:20:0:
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:116:0: warning: "IOT_LOG_TRACE" redefined
  #define IOT_LOG_TRACE(fmt, ...)   IOT_LOG(EN_IOT_LOG_LEVEL_TRACE, fmt, ##__VA_ARGS__)
@@ -103,10 +57,10 @@ In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/
  static char *MakeProfileReport(WeChatProfile *payload)
               ^~~~~~~~~~~~~~~~~
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c: In function 'IoTProfilePropertyReport':
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c:325:9: warning: 'return' with no value, in function returning non-void
+../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c:329:9: warning: 'return' with no value, in function returning non-void
          return;
          ^~~~~~
-../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c:314:5: note: declared here
+../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c:318:5: note: declared here
  int IoTProfilePropertyReport(char *deviceID, WeChatProfile *payload)
      ^~~~~~~~~~~~~~~~~~~~~~~~
 At top level:
@@ -116,20 +70,67 @@ At top level:
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_profile.c:187:14: warning: 'MakeProfileCmdResp' defined but not used [-Wunused-function]
  static char *MakeProfileCmdResp(IoTCmdResp_t *payload)
               ^~~~~~~~~~~~~~~~~~
-[9/334] gcc cross compiler obj/base/hiviewdfx/hilog_lite/frameworks/mini/libhilog_lite.hiview_log.o
-[10/334] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_util.o
-[11/334] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_cache.o
-[12/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.add_auth_info_client.o
-[13/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.auth_info.o
-[14/334] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_file.o
-[15/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.add_auth_info.o
-[16/334] gcc cross compiler obj/base/hiviewdfx/hilog_lite/frameworks/mini/libhilog_lite.hiview_output_log.o
-../../../base/hiviewdfx/hilog_lite/frameworks/mini/hiview_output_log.c: In function 'LogCommonFmt':
-../../../base/hiviewdfx/hilog_lite/frameworks/mini/hiview_output_log.c:387:15: warning: comparison is always false due to limited range of data type [-Wtype-limits]
-     if (level < 0 || level >= HILOG_LV_MAX) {
-               ^
-[17/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.exchange_auth_info.o
-[18/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_sta.o
+[6/337] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_service.o
+[7/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.uart_control.o
+../../../applications/sample/wifi-iot/app/iottencent_demo/uart_control.c: In function 'UartTask':
+../../../applications/sample/wifi-iot/app/iottencent_demo/uart_control.c:93:52: warning: pointer targets in passing argument 2 of 'IoTUartRead' differ in signedness [-Wpointer-sign]
+         Serial_RxFlag = IoTUartRead(HI_UART_IDX_1, uartReadBuff, UART_BUFF_SIZE);
+                                                    ^~~~~~~~~~~~
+In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/uart_control.c:25:0:
+../../../base/iot_hardware/peripheral/interfaces/kits/iot_uart.h:169:5: note: expected 'unsigned char *' but argument is of type 'char *'
+ int IoTUartRead(unsigned int id, unsigned char *data, unsigned int dataLen);
+     ^~~~~~~~~~~
+../../../applications/sample/wifi-iot/app/iottencent_demo/uart_control.c:79:14: warning: unused variable 'count' [-Wunused-variable]
+     uint32_t count = 0;
+              ^~~~~
+[8/337] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_config.o
+[9/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.GPS.o
+../../../applications/sample/wifi-iot/app/iottencent_demo/GPS.c: In function 'parse_GPGGA':
+../../../applications/sample/wifi-iot/app/iottencent_demo/GPS.c:36:10: warning: variable 'handleflag' set but not used [-Wunused-but-set-variable]
+  uint8_t handleflag;
+          ^~~~~~~~~~
+../../../applications/sample/wifi-iot/app/iottencent_demo/GPS.c:34:8: warning: unused variable 'minute' [-Wunused-variable]
+  float minute = 0;
+        ^~~~~~
+../../../applications/sample/wifi-iot/app/iottencent_demo/GPS.c: In function 'parse_GPGLL':
+../../../applications/sample/wifi-iot/app/iottencent_demo/GPS.c:149:10: warning: variable 'handleflag' set but not used [-Wunused-but-set-variable]
+  uint8_t handleflag;
+          ^~~~~~~~~~
+[10/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.app_demo_iot.o
+In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:23:0:
+../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:116:0: warning: "IOT_LOG_TRACE" redefined
+ #define IOT_LOG_TRACE(fmt, ...)   IOT_LOG(EN_IOT_LOG_LEVEL_TRACE, fmt, ##__VA_ARGS__)
+ 
+../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:92:0: note: this is the location of the previous definition
+ #define IOT_LOG_TRACE(fmt, ...) \
+ 
+In file included from ../../../device/hisilicon/hispark_pegasus/sdk_liteos/include/hi_task.h:25:0,
+                 from ../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:16:
+../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c: In function 'DemoMsgRcvCallBack':
+../../../device/hisilicon/hispark_pegasus/sdk_liteos/include/hi_types_base.h:291:20: warning: 'return' with a value, in function returning void
+ #define HI_NULL    ((void *)0)
+                    ^
+../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:111:12: note: in expansion of macro 'HI_NULL'
+     return HI_NULL;
+            ^~~~~~~
+../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:97:13: note: declared here
+ static void DemoMsgRcvCallBack(int qos, const char *topic, const char *payload)
+             ^~~~~~~~~~~~~~~~~~
+../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c: In function 'DemoEntry':
+../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:169:39: warning: unused parameter 'arg' [-Wunused-parameter]
+ static hi_void *DemoEntry(const char *arg)
+                                       ^~~
+At top level:
+../../../applications/sample/wifi-iot/app/iottencent_demo/app_demo_iot.c:84:13: warning: 'DeviceMsgCallback' defined but not used [-Wunused-function]
+ static int  DeviceMsgCallback(FnMsgCallBack msgCallBack)
+             ^~~~~~~~~~~~~~~~~
+[11/337] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_cache.o
+[12/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.add_auth_info.o
+[13/337] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_util.o
+[14/337] gcc cross compiler obj/base/hiviewdfx/hilog_lite/frameworks/mini/libhilog_lite.hiview_log_limit.o
+[15/337] gcc cross compiler obj/base/hiviewdfx/hilog_lite/frameworks/mini/libhilog_lite.hiview_log.o
+[16/337] gcc cross compiler obj/base/hiviewdfx/hiview_lite/libhiview_lite.hiview_file.o
+[17/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_sta.o
 In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_sta.c:25:0:
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:116:0: warning: "IOT_LOG_TRACE" redefined
  #define IOT_LOG_TRACE(fmt, ...)   IOT_LOG(EN_IOT_LOG_LEVEL_TRACE, fmt, ##__VA_ARGS__)
@@ -148,7 +149,9 @@ At top level:
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_sta.c:91:13: warning: 'WpaEventCB' defined but not used [-Wunused-function]
  static void WpaEventCB(const hi_wifi_event *hisiEvent)
              ^~~~~~~~~~
-[19/334] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_main.o
+[18/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_mutex.o
+[19/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_types.o
+[20/337] gcc cross compiler obj/applications/sample/wifi-iot/app/iottencent_demo/libappDemoIot.iot_main.o
 In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_main.c:30:0:
 ../../../applications/sample/wifi-iot/app/iottencent_demo/iot_log.h:116:0: warning: "IOT_LOG_TRACE" redefined
  #define IOT_LOG_TRACE(fmt, ...)   IOT_LOG(EN_IOT_LOG_LEVEL_TRACE, fmt, ##__VA_ARGS__)
@@ -227,46 +230,25 @@ In file included from ../../../applications/sample/wifi-iot/app/iottencent_demo/
 ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/kal/cmsis/cmsis_os2.h:1143:12: note: expected 'osMessageQueueId_t {aka void *}' but argument is of type 'unsigned int'
  osStatus_t osMessageQueuePut (osMessageQueueId_t mq_id, const void *msg_ptr, uint8_t msg_prio, uint32_t timeout);
             ^~~~~~~~~~~~~~~~~
-[20/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.exchange_auth_info_client.o
-[21/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_task_main.o
-[22/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/standard_exchange_task_mock/libdeviceauth.standard_exchange_task_mock.o
-[23/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_client_unbind_exchange_task.o
-[24/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/new_pake_task_mock/libdeviceauth.new_pake_task_main_mock.o
-[25/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/libdeviceauth.protocol_common.o
-[26/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/iso_protocol_task/libdeviceauth.iso_server_protocol_task.o
-[27/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/iso_protocol_task/libdeviceauth.iso_client_protocol_task.o
-[28/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/pake_protocol/libdeviceauth.pake_protocol_common.o
-[29/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/pake_protocol/pake_protocol_ec_mock/libdeviceauth.pake_protocol_ec_mock.o
-[30/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/iso_protocol/libdeviceauth.iso_protocol_common.o
-[31/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/libdeviceauth.pake_message_util.o
-[32/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_client_bind_exchange_task.o
-[33/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/pake_task_mock/libdeviceauth.pake_task_main_mock.o
-[34/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_server_unbind_exchange_task.o
-[35/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_server_task.o
-[36/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_server_bind_exchange_task.o
-[37/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_mutex.o
-[38/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/pake_protocol/pake_protocol_dl_mock/libdeviceauth.pake_protocol_dl_mock.o
-[39/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/libdeviceauth.pake_task_common.o
-[40/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_client_task.o
-[41/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/L0/libdeviceauth_hal_liteos.hc_file.o
-[42/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.alg_loader.o
-[43/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session_lite/libdeviceauth.auth_session_server_lite.o
-[44/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/new_pake_protocol/new_pake_protocol_ec_mock/libdeviceauth.new_pake_protocol_ec_mock.o
-[45/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/L0/libdeviceauth_hal_liteos.hc_init_protection.o
+[21/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_condition.o
+[22/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.common_util.o
+[23/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/L0/libdeviceauth_hal_liteos.hc_file.o
+[24/337] gcc cross compiler obj/base/hiviewdfx/hilog_lite/frameworks/mini/libhilog_lite.hiview_output_log.o
+../../../base/hiviewdfx/hilog_lite/frameworks/mini/hiview_output_log.c: In function 'LogCommonFmt':
+../../../base/hiviewdfx/hilog_lite/frameworks/mini/hiview_output_log.c:387:15: warning: comparison is always false due to limited range of data type [-Wtype-limits]
+     if (level < 0 || level >= HILOG_LV_MAX) {
+               ^
+[25/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_time.o
+[26/337] gcc cross compiler obj/base/security/deviceauth/hals/src/dev_info/3861/libdeviceauth_hal_liteos.hc_dev_info.o
+[27/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.alg_loader.o
+[28/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/L0/libdeviceauth_hal_liteos.hc_init_protection.o
 ../../../base/security/deviceauth/hals/src/liteos/L0/hc_init_protection.c:77:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
  void InitSecurityDevAuth()
       ^~~~~~~~~~~~~~~~~~~
 ../../../base/security/deviceauth/hals/src/liteos/L0/hc_init_protection.c:86:6: warning: function declaration isn't a prototype [-Wstrict-prototypes]
  void DestroySecurityDevAuth()
       ^~~~~~~~~~~~~~~~~~~~~~
-[46/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_types.o
-[47/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_task_common.o
-[48/334] gcc cross compiler obj/base/security/deviceauth/hals/src/dev_info/3861/libdeviceauth_hal_liteos.hc_dev_info.o
-[49/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_thread.o
-[50/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session_lite/libdeviceauth.auth_session_client_lite.o
-[51/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_condition.o
-[52/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_time.o
-[53/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_log.o
+[29/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_log.o
 In file included from ../../../base/hiviewdfx/hilog_lite/interfaces/native/kits/hilog_lite/log.h:19:0,
                  from ../../../base/security/deviceauth/hals/inc/liteos/hc_log.h:38,
                  from ../../../base/security/deviceauth/hals/src/common/hc_log.c:16:
@@ -343,15 +325,14 @@ In file included from ../../../base/hiviewdfx/hilog_lite/interfaces/native/kits/
 ../../../base/security/deviceauth/hals/src/common/hc_log.c:39:13: note: in expansion of macro 'DEV_AUTH_LOG_ERROR'
              DEV_AUTH_LOG_ERROR(buf);
              ^~~~~~~~~~~~~~~~~~
-[54/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_util.o
-[55/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/json/libhichainsdk.jsonutil.o
-[56/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.add_auth_info_request.o
-[57/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.key_agreement_server.o
-[58/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.common_util.o
-[59/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.key_agreement.o
-[60/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.remove_auth_info_client.o
-[61/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/json/libhichainsdk.commonutil.o
-[62/334] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/L0/libdeviceauth_hal_liteos.huks_adapter.o
+[30/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/libdeviceauth_hal_liteos.hc_thread.o
+[31/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.json_utils.o
+[32/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_tlv_parser.o
+[33/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_related/account_related_group_manager_mock/libdeviceauth.account_related_group_manager_mock.o
+[34/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/json/libhichainsdk.jsonutil.o
+[35/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/json/libhichainsdk.commonutil.o
+[36/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.add_auth_info_client.o
+[37/337] gcc cross compiler obj/base/security/deviceauth/hals/src/liteos/L0/libdeviceauth_hal_liteos.huks_adapter.o
 ../../../base/security/deviceauth/hals/src/liteos/L0/huks_adapter.c:63:16: warning: function declaration isn't a prototype [-Wstrict-prototypes]
  static int32_t InitHks()
                 ^~~~~~~
@@ -368,102 +349,184 @@ In file included from ../../../base/security/deviceauth/hals/inc/common/huks_ada
 ../../../base/security/deviceauth/hals/inc/common/alg_defs.h:147:23: note: 'bigNumCompare' declared here
      BigNumCompareFunc bigNumCompare;
                        ^~~~~~~~~~~~~
-[63/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_server.o
-[64/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.key_agreement_client.o
-[65/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.add_auth_info_data.o
-[66/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.add_auth_info_response.o
-[67/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.pake_client.o
-[68/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.sec_clone_server.o
-[69/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/schedule/libhichainsdk.build_object.o
-[70/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/log/libhichainsdk.log.o
-[71/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.sts_client.o
-[72/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.pake_server.o
-[73/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/schedule/libhichainsdk.distribution.o
-[74/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/libhichainsdk.hichain.o
-[75/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.import_add_auth_data.o
-[76/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.exchange_response.o
-[77/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_start_response.o
-[78/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_ack_request.o
-[79/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/huks_adapter/libhichainsdk.huks_adapter.o
-[80/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.sts_server.o
-[81/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.exchange_auth_data.o
-[82/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_start_request.o
-[83/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_ack_response.o
-[84/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.exchange_request.o
-[85/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.inform_message.o
-[86/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_request.o
-[87/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_response.o
-[88/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.rmv_auth_info_data.o
-[89/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.rmv_auth_info_response.o
-[90/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_client_confirm.o
-[91/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.rmv_auth_info_request.o
-[92/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.key_agreement_version.o
-[93/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.parsedata.o
-[94/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.sec_clone_data.o
-[95/334] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_server_confirm.o
-[96/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_string.o
-[97/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_task_thread.o
-[98/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_related/account_related_group_manager_mock/libdeviceauth.account_related_group_manager_mock.o
-[99/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_related/across_account_group_mock/libdeviceauth.across_account_group_mock.o
-[100/334] gcc cross compiler obj/base/security/deviceauth/services/common/src/channel_manager/libdeviceauth.channel_manager.o
-[101/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.json_utils.o
-[102/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_parcel.o
-[103/334] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_tlv_parser.o
-[104/334] gcc cross compiler obj/base/security/deviceauth/services/group_auth/src/group_auth_manager/account_unrelated_group_auth/libdeviceauth.account_unrelated_group_auth.o
-[105/334] gcc cross compiler obj/base/security/deviceauth/services/group_auth/src/group_auth_manager/account_related_group_auth_mock/libdeviceauth.account_related_group_auth_mock.o
-[106/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_related/identical_account_group_mock/libdeviceauth.identical_account_group_mock.o
-[107/334] gcc cross compiler obj/base/security/deviceauth/services/common/src/task_manager/libdeviceauth.task_manager.o
-[108/334] gcc cross compiler obj/base/security/deviceauth/services/group_auth/src/group_auth_manager/libdeviceauth.group_auth_manager.o
-[109/334] gcc cross compiler obj/base/security/deviceauth/services/common/src/callback_manager/libdeviceauth.callback_manager.o
-[110/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_unrelated/account_unrelated_group_manager/libdeviceauth.account_unrelated_group_manager.o
-[111/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/libdeviceauth.group_common.o
-[112/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/libdeviceauth.group_manager.o
-[113/334] gcc cross compiler obj/base/security/deviceauth/services/common/src/broadcast_manager/libdeviceauth.broadcast_manager.o
-[114/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/key_agree_session_mock/libdeviceauth.key_agree_session_client_mock.o
-[115/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session_lite/libdeviceauth.bind_session_client_lite.o
-[116/334] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_unrelated/peer_to_peer_group/libdeviceauth.peer_to_peer_group.o
-[117/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/libdeviceauth.session_common.o
-[118/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_client.o
-[119/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session_lite/libdeviceauth.bind_session_server_lite.o
-[120/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_common.o
-[121/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.das_version_util.o
-[122/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/key_agree_session_mock/libdeviceauth.key_agree_session_server_mock.o
-[123/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.das_common.o
-[124/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session_lite/libdeviceauth.auth_session_common_lite.o
-[125/334] gcc cross compiler obj/base/security/deviceauth/services/libdeviceauth.device_auth.o
-[126/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/libdeviceauth.auth_session_common_util.o
-[127/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session/libdeviceauth.bind_session_server.o
-[128/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session/libdeviceauth.bind_session_common.o
-[129/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/libdeviceauth.module_common.o
-[130/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.das_module.o
-[131/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/libdeviceauth.version_util.o
-[132/334] gcc cross compiler obj/base/security/deviceauth/services/common/src/channel_manager/soft_bus_channel_mock/libdeviceauth.soft_bus_channel_mock.o
-[133/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session_lite/libdeviceauth.bind_session_common_lite.o
-[134/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.task_main.o
-[135/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/new_pake_protocol/new_pake_protocol_dl_mock/libdeviceauth.new_pake_protocol_dl_mock.o
-[136/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/os_dependency/posix/libhuks_3.0_sdk.hks_file_operator_lite.o
-[137/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session/libdeviceauth.bind_session_client.o
-[138/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_client_check.o
-[139/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/libdeviceauth.dev_auth_module_manager.o
-[140/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_client_service_adapter_lite.o
-[141/334] gcc cross compiler obj/base/security/deviceauth/services/session/src/libdeviceauth.session_manager.o
-[142/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/ipc/src/libhuks_3.0_sdk.hks_client_service_passthrough.o
-[143/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/sysinfo/src/libhuks_3.0_sdk.hks_get_process_info_passthrough.o
-[144/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/posix/libhuks_3.0_sdk.hks_mem.o
-[145/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_crypto_adapter.o
-[146/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_auth.o
-[147/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_upgrade_storage_data.o
-[148/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_upgrade_key_info.o
-[149/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/sysinfo/src/libhuks_3.0_sdk.hks_get_udid.o
-[150/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/core/src/libhuks_3.0_sdk.hks_local_engine.o
-[151/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_common_check.o
-[152/334] gcc cross compiler obj/base/security/deviceauth/services/module/src/tcis_module_mock/libdeviceauth.tcis_module_mock.o
-[153/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_keyblob.o
-[154/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_param.o
-[155/334] gcc cross compiler obj/base/security/huks/interfaces/innerkits/huks_lite/libhuks_3.0_sdk.hks_tmp_client.o
-[156/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_storage_adapter.o
-[157/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_crypto_ed25519.o
-[158/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_client_service.o
+[38/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.exchange_auth_info_client.o
+[39/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.auth_info.o
+[40/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_client.o
+[41/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.remove_auth_info_client.o
+[42/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.sec_clone_server.o
+[43/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.sts_client.o
+[44/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/libhichainsdk.hichain.o
+[45/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_server.o
+[46/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.pake_client.o
+[47/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/auth_info/libhichainsdk.exchange_auth_info.o
+[48/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/log/libhichainsdk.log.o
+[49/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.key_agreement_server.o
+[50/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.pake_server.o
+[51/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.add_auth_info_request.o
+[52/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.key_agreement.o
+[53/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.key_agreement_client.o
+[54/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/schedule/libhichainsdk.build_object.o
+[55/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.add_auth_info_response.o
+[56/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/key_agreement/libhichainsdk.sts_server.o
+[57/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.exchange_request.o
+[58/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.exchange_auth_data.o
+[59/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_common.o
+[60/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/huks_adapter/libhichainsdk.huks_adapter.o
+[61/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_ack_response.o
+[62/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.add_auth_info_data.o
+[63/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_ack_request.o
+[64/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_start_request.o
+[65/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.parsedata.o
+[66/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/schedule/libhichainsdk.distribution.o
+[67/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.key_agreement_version.o
+[68/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.exchange_response.o
+[69/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.auth_start_response.o
+[70/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_response.o
+[71/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.import_add_auth_data.o
+[72/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_server_confirm.o
+[73/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_request.o
+[74/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.inform_message.o
+[75/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.sec_clone_data.o
+[76/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.rmv_auth_info_response.o
+[77/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.pake_client_confirm.o
+[78/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_task_thread.o
+[79/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.rmv_auth_info_request.o
+[80/337] gcc cross compiler obj/base/security/deviceauth/frameworks/deviceauth_lite/source/struct/libhichainsdk.rmv_auth_info_data.o
+[81/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_string.o
+[82/337] gcc cross compiler obj/base/security/deviceauth/services/group_auth/src/group_auth_manager/account_related_group_auth_mock/libdeviceauth.account_related_group_auth_mock.o
+[83/337] gcc cross compiler obj/base/security/deviceauth/services/common/src/callback_manager/libdeviceauth.callback_manager.o
+[84/337] gcc cross compiler obj/base/security/deviceauth/services/common/src/channel_manager/libdeviceauth.channel_manager.o
+[85/337] gcc cross compiler obj/base/security/deviceauth/hals/src/common/libdeviceauth_hal_liteos.hc_parcel.o
+[86/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_related/identical_account_group_mock/libdeviceauth.identical_account_group_mock.o
+[87/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_related/across_account_group_mock/libdeviceauth.across_account_group_mock.o
+[88/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session_lite/libdeviceauth.auth_session_client_lite.o
+[89/337] gcc cross compiler obj/base/security/deviceauth/services/common/src/task_manager/libdeviceauth.task_manager.o
+[90/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_unrelated/account_unrelated_group_manager/libdeviceauth.account_unrelated_group_manager.o
+[91/337] gcc cross compiler obj/base/security/deviceauth/services/group_auth/src/group_auth_manager/libdeviceauth.group_auth_manager.o
+[92/337] gcc cross compiler obj/base/security/deviceauth/services/group_auth/src/group_auth_manager/account_unrelated_group_auth/libdeviceauth.account_unrelated_group_auth.o
+[93/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/libdeviceauth.version_util.o
+[94/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session_lite/libdeviceauth.bind_session_common_lite.o
+[95/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session/libdeviceauth.auth_session_util.o
+[96/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session_lite/libdeviceauth.auth_session_server_lite.o
+[97/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/libdeviceauth.group_common.o
+[98/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/account_unrelated/peer_to_peer_group/libdeviceauth.peer_to_peer_group.o
+[99/337] gcc cross compiler obj/base/security/deviceauth/services/common/src/broadcast_manager/libdeviceauth.broadcast_manager.o
+[100/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session/libdeviceauth.bind_session_server.o
+[101/337] gcc cross compiler obj/base/security/deviceauth/services/group_manager/src/group_manager/libdeviceauth.group_manager.o
+[102/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/key_agree_session_mock/libdeviceauth.key_agree_session_client_mock.o
+[103/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session/libdeviceauth.bind_session_client.o
+[104/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/auth_session_lite/libdeviceauth.auth_session_common_lite.o
+[105/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session_lite/libdeviceauth.bind_session_server_lite.o
+[106/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/libdeviceauth.session_common.o
+[107/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session_lite/libdeviceauth.bind_session_client_lite.o
+[108/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/libdeviceauth.dev_auth_module_manager.o
+[109/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/libdeviceauth.module_common.o
+[110/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/key_agree_session_mock/libdeviceauth.key_agree_session_server_mock.o
+[111/337] gcc cross compiler obj/base/security/deviceauth/services/libdeviceauth.device_auth.o
+[112/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/libdeviceauth.auth_session_common_util.o
+[113/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/pake_protocol/pake_protocol_ec_mock/libdeviceauth.pake_protocol_ec_mock.o
+[114/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.das_module.o
+[115/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/libdeviceauth.protocol_common.o
+[116/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.das_common.o
+[117/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/libdeviceauth.session_manager.o
+[118/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/iso_protocol_task/libdeviceauth.iso_server_protocol_task.o
+[119/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_client_task.o
+[120/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.das_version_util.o
+[121/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_task_main.o
+[122/337] gcc cross compiler obj/base/security/deviceauth/services/session/src/bind_session/libdeviceauth.bind_session_common.o
+[123/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_task_common.o
+[124/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/libdeviceauth.pake_task_common.o
+[125/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/new_pake_task_mock/libdeviceauth.new_pake_task_main_mock.o
+[126/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/pake_task_mock/libdeviceauth.pake_task_main_mock.o
+[127/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_client_bind_exchange_task.o
+[128/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/standard_exchange_task_mock/libdeviceauth.standard_exchange_task_mock.o
+[129/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_client_unbind_exchange_task.o
+[130/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_server_unbind_exchange_task.o
+[131/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/lite_exchange_task/libdeviceauth.iso_server_bind_exchange_task.o
+[132/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/iso_protocol_task/libdeviceauth.iso_client_protocol_task.o
+[133/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/iso_task/libdeviceauth.iso_server_task.o
+[134/337] gcc cross compiler obj/base/security/huks/interfaces/innerkits/huks_lite/libhuks_3.0_sdk.hks_tmp_client.o
+[135/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/pake_task/libdeviceauth.pake_message_util.o
+[136/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/libhuks_3.0_sdk.hks_passthrough_access.o
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c: In function 'HksAccessProcessInit':
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:96:39: warning: unused parameter 'msgId' [-Wunused-parameter]
+ int32_t HksAccessProcessInit(uint32_t msgId, const struct HksBlob *key, const struct HksParamSet *paramSet,
+                                       ^~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:96:68: warning: unused parameter 'key' [-Wunused-parameter]
+ int32_t HksAccessProcessInit(uint32_t msgId, const struct HksBlob *key, const struct HksParamSet *paramSet,
+                                                                    ^~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:96:99: warning: unused parameter 'paramSet' [-Wunused-parameter]
+ int32_t HksAccessProcessInit(uint32_t msgId, const struct HksBlob *key, const struct HksParamSet *paramSet,
+                                                                                                   ^~~~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:97:15: warning: unused parameter 'operationHandle' [-Wunused-parameter]
+     uint64_t *operationHandle)
+               ^~~~~~~~~~~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c: In function 'HksAccessProcessMultiUpdate':
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:102:46: warning: unused parameter 'msgId' [-Wunused-parameter]
+ int32_t HksAccessProcessMultiUpdate(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
+                                              ^~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:102:62: warning: unused parameter 'operationHandle' [-Wunused-parameter]
+ int32_t HksAccessProcessMultiUpdate(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
+                                                              ^~~~~~~~~~~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:102:101: warning: unused parameter 'inData' [-Wunused-parameter]
+ int32_t HksAccessProcessMultiUpdate(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
+                                                                                                     ^~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:103:21: warning: unused parameter 'outData' [-Wunused-parameter]
+     struct HksBlob *outData)
+                     ^~~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c: In function 'HksAccessProcessFinal':
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:108:40: warning: unused parameter 'msgId' [-Wunused-parameter]
+ int32_t HksAccessProcessFinal(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
+                                        ^~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:108:56: warning: unused parameter 'operationHandle' [-Wunused-parameter]
+ int32_t HksAccessProcessFinal(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
+                                                        ^~~~~~~~~~~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:108:95: warning: unused parameter 'inData' [-Wunused-parameter]
+ int32_t HksAccessProcessFinal(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
+                                                                                               ^~~~~~
+../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:109:21: warning: unused parameter 'outData' [-Wunused-parameter]
+     struct HksBlob *outData)
+                     ^~~~~~~
+[137/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/das_module/libdeviceauth.task_main.o
+[138/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_keyblob.o
+[139/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_common.o
+[140/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_aes.o
+[141/337] gcc cross compiler obj/base/security/huks/interfaces/innerkits/huks_standard/main/src/libhuks_3.0_sdk.hks_api.o
+[142/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/pake_protocol/libdeviceauth.pake_protocol_common.o
+[143/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/iso_protocol/libdeviceauth.iso_protocol_common.o
+[144/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_storage_adapter.o
+[145/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_ecc.o
+[146/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_storage_lite.o
+[147/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_bn.o
+[148/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_keyblob_lite.o
+[149/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_upgrade_key_info.o
+[150/337] gcc cross compiler obj/base/security/deviceauth/services/common/src/data_base/libdeviceauth.database_manager.o
+[151/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_core_service.o
+[152/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_rkc.o
+[153/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_crypto_ed25519.o
+[154/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/os_dependency/posix/libhuks_3.0_sdk.hks_file_operator_lite.o
+[155/337] gcc cross compiler obj/base/security/deviceauth/services/common/src/channel_manager/soft_bus_channel_mock/libdeviceauth.soft_bus_channel_mock.o
+[156/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/pake_protocol/pake_protocol_dl_mock/libdeviceauth.pake_protocol_dl_mock.o
+[157/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_rkc_rw.o
+[158/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_upgrade_storage_data.o
+[159/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_common_check.o
+[160/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_client_service_adapter_lite.o
+[161/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/tcis_module_mock/libdeviceauth.tcis_module_mock.o
+[162/337] STAMP obj/build/lite/mark_as_prebuilts.stamp
+[163/337] STAMP obj/base/update/ota_lite/frameworks/update_api.stamp
+[164/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/sysinfo/src/libhuks_3.0_sdk.hks_get_udid.o
+[165/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/sysinfo/src/libhuks_3.0_sdk.hks_get_process_info_passthrough.o
+[166/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/ipc/src/libhuks_3.0_sdk.hks_client_service_passthrough.o
+[167/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_crypto_adapter.o
+[168/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_auth.o
+[169/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/new_pake_protocol/new_pake_protocol_dl_mock/libdeviceauth.new_pake_protocol_dl_mock.o
+[170/337] gcc cross compiler obj/base/security/deviceauth/services/module/src/protocol/new_pake_protocol/new_pake_protocol_ec_mock/libdeviceauth.new_pake_protocol_ec_mock.o
+[171/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_client_check.o
+[172/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_check_paramset.o
+../../../base/security/huks/frameworks/huks_standard/main/common/src/hks_check_paramset.c:309:16: warning: 'CheckSignVerifyParamsByAlg' defined but not used [-Wunused-function]
+ static int32_t CheckSignVerifyParamsByAlg(uint32_t cmdId, uint32_t alg, const struct ParamsValues *inputParams)
+                ^~~~~~~~~~~~~~~~~~~~~~~~~~
+[173/337] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_client_service.o
 ../../../base/security/huks/services/huks_standard/huks_service/main/core/src/hks_client_service.c: In function 'HksServiceSignWithDeviceKey':
 ../../../base/security/huks/services/huks_standard/huks_service/main/core/src/hks_client_service.c:1214:59: warning: unused parameter 'processName' [-Wunused-parameter]
  int32_t HksServiceSignWithDeviceKey(const struct HksBlob *processName, uint32_t keyId,
@@ -559,54 +622,14 @@ In file included from ../../../base/security/deviceauth/hals/inc/common/huks_ada
 ../../../base/security/huks/services/huks_standard/huks_service/main/core/src/hks_client_service.c:1254:87: warning: unused parameter 'certChain' [-Wunused-parameter]
  int32_t HksServiceExportTrustCerts(const struct HksBlob *processName, struct HksBlob *certChain)
                                                                                        ^~~~~~~~~
-[159/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/libhuks_3.0_sdk.hks_passthrough_access.o
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c: In function 'HksAccessProcessInit':
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:96:39: warning: unused parameter 'msgId' [-Wunused-parameter]
- int32_t HksAccessProcessInit(uint32_t msgId, const struct HksBlob *key, const struct HksParamSet *paramSet,
-                                       ^~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:96:68: warning: unused parameter 'key' [-Wunused-parameter]
- int32_t HksAccessProcessInit(uint32_t msgId, const struct HksBlob *key, const struct HksParamSet *paramSet,
-                                                                    ^~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:96:99: warning: unused parameter 'paramSet' [-Wunused-parameter]
- int32_t HksAccessProcessInit(uint32_t msgId, const struct HksBlob *key, const struct HksParamSet *paramSet,
-                                                                                                   ^~~~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:97:15: warning: unused parameter 'operationHandle' [-Wunused-parameter]
-     uint64_t *operationHandle)
-               ^~~~~~~~~~~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c: In function 'HksAccessProcessMultiUpdate':
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:102:46: warning: unused parameter 'msgId' [-Wunused-parameter]
- int32_t HksAccessProcessMultiUpdate(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
-                                              ^~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:102:62: warning: unused parameter 'operationHandle' [-Wunused-parameter]
- int32_t HksAccessProcessMultiUpdate(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
-                                                              ^~~~~~~~~~~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:102:101: warning: unused parameter 'inData' [-Wunused-parameter]
- int32_t HksAccessProcessMultiUpdate(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
-                                                                                                     ^~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:103:21: warning: unused parameter 'outData' [-Wunused-parameter]
-     struct HksBlob *outData)
-                     ^~~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c: In function 'HksAccessProcessFinal':
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:108:40: warning: unused parameter 'msgId' [-Wunused-parameter]
- int32_t HksAccessProcessFinal(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
-                                        ^~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:108:56: warning: unused parameter 'operationHandle' [-Wunused-parameter]
- int32_t HksAccessProcessFinal(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
-                                                        ^~~~~~~~~~~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:108:95: warning: unused parameter 'inData' [-Wunused-parameter]
- int32_t HksAccessProcessFinal(uint32_t msgId, uint64_t operationHandle, const struct HksBlob *inData,
-                                                                                               ^~~~~~
-../../../base/security/huks/services/huks_standard/huks_service/main/os_dependency/idl/passthrough/hks_passthrough_access.c:109:21: warning: unused parameter 'outData' [-Wunused-parameter]
-     struct HksBlob *outData)
-                     ^~~~~~~
-[160/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_bn.o
-[161/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_rkc_rw.o
-[162/334] STAMP obj/base/update/ota_lite/frameworks/test.stamp
-[163/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_keyblob_lite.o
-[164/334] STAMP obj/base/update/ota_lite/frameworks/update_api.stamp
-[165/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_ecdh.o
-[166/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_ecc.o
-[167/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_base_check.o
+[174/337] STAMP obj/base/update/ota_lite/frameworks/test.stamp
+[175/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/os_dependency/posix/libhuks_3.0_sdk.hks_mem.o
+[176/337] STAMP obj/build/lite/ndk.stamp
+[177/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_param.o
+[178/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/core/src/libhuks_3.0_sdk.hks_local_engine.o
+[179/337] gcc cross compiler obj/base/update/ota_lite/frameworks/source/verify/libhota.app_rsa.o
+[180/337] gcc cross compiler obj/base/startup/syspara_lite/frameworks/token/src/token_impl_hal/libtoken_static.token.o
+[181/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_base_check.o
 ../../../base/security/huks/frameworks/huks_standard/main/common/src/hks_base_check.c: In function 'HksCheckSignature':
 ../../../base/security/huks/frameworks/huks_standard/main/common/src/hks_base_check.c:1016:36: warning: unused parameter 'cmdId' [-Wunused-parameter]
  int32_t HksCheckSignature(uint32_t cmdId, uint32_t alg, const struct HksBlob *key, const struct HksBlob *signature)
@@ -614,81 +637,8 @@ In file included from ../../../base/security/deviceauth/hals/inc/common/huks_ada
 ../../../base/security/huks/frameworks/huks_standard/main/common/src/hks_base_check.c:1016:106: warning: unused parameter 'signature' [-Wunused-parameter]
  int32_t HksCheckSignature(uint32_t cmdId, uint32_t alg, const struct HksBlob *key, const struct HksBlob *signature)
                                                                                                           ^~~~~~~~~
-[168/334] gcc cross compiler obj/base/security/deviceauth/services/common/src/data_base/libdeviceauth.database_manager.o
-[169/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_ecdsa.o
-[170/334] STAMP obj/build/lite/config/component/cJSON/cjson_shared.stamp
-[171/334] STAMP obj/build/lite/mark_as_prebuilts.stamp
-[172/334] STAMP obj/build/lite/ndk.stamp
-[173/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/common/src/libhuks_3.0_sdk.hks_check_paramset.o
-../../../base/security/huks/frameworks/huks_standard/main/common/src/hks_check_paramset.c:309:16: warning: 'CheckSignVerifyParamsByAlg' defined but not used [-Wunused-function]
- static int32_t CheckSignVerifyParamsByAlg(uint32_t cmdId, uint32_t alg, const struct ParamsValues *inputParams)
-                ^~~~~~~~~~~~~~~~~~~~~~~~~~
-[174/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_hash.o
-[175/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_core_service.o
-[176/334] gcc cross compiler obj/base/security/huks/interfaces/innerkits/huks_standard/main/src/libhuks_3.0_sdk.hks_api.o
-[177/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_common.o
-[178/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_aes.o
-[179/334] gcc cross compiler obj/base/update/ota_lite/frameworks/source/verify/libhota.app_rsa.o
-[180/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_engine/main/core/src/libhuks_3.0_sdk.hks_rkc.o
-[181/334] gcc cross compiler obj/base/update/ota_lite/frameworks/source/verify/libhota.app_sha256.o
-[182/334] STAMP obj/base/startup/syspara_lite/frameworks/token/token_notes.stamp
-[183/334] gcc cross compiler obj/base/startup/bootstrap_lite/services/source/libbootstrap.system_init.o
-[184/334] gcc cross compiler obj/base/update/ota_lite/frameworks/source/verify/libhota.hota_verify.o
-In file included from ../../../base/update/ota_lite/frameworks/source/verify/hota_verify.c:21:0:
-../../../base/update/ota_lite/hals/hal_hota_board.h:111:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
- const ComponentTableInfo *HotaHalGetPartitionInfo();
- ^~~~~
-[185/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_rsa.o
-[186/334] gcc cross compiler obj/base/security/huks/services/huks_standard/huks_service/main/core/src/libhuks_3.0_sdk.hks_storage_lite.o
-[187/334] STAMP obj/device/hisilicon/hispark_pegasus/hispark_pegasus.stamp
-[188/334] gcc cross compiler obj/base/startup/bootstrap_lite/services/source/libbootstrap.bootstrap_service.o
-[189/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_hmac.o
-[190/334] gcc cross compiler obj/base/startup/syspara_lite/frameworks/token/src/token_impl_hal/libtoken_static.token.o
-[191/334] gcc cross compiler obj/base/startup/syspara_lite/frameworks/parameter/src/param_impl_hal/libsysparam.param_impl_hal.o
-[192/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_kdf.o
-[193/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_gpio.o
-[194/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_i2c.o
-../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_iot_i2c.c: In function 'IoTI2cWrite':
-../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_iot_i2c.c:25:22: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
-     i2cData.send_buf = data;
-                      ^
-[195/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_flash.o
-[196/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_x25519.o
-[197/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/libwifiservice.wifi_device_util.o
-[198/334] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_engine.o
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c: In function 'HksCryptoHalSign':
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:207:48: warning: unused parameter 'key' [-Wunused-parameter]
- int32_t HksCryptoHalSign(const struct HksBlob *key, const struct HksUsageSpec *usageSpec,
-                                                ^~~
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:208:27: warning: unused parameter 'message' [-Wunused-parameter]
-     const struct HksBlob *message, struct HksBlob *signature)
-                           ^~~~~~~
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:208:52: warning: unused parameter 'signature' [-Wunused-parameter]
-     const struct HksBlob *message, struct HksBlob *signature)
-                                                    ^~~~~~~~~
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c: In function 'HksCryptoHalVerify':
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:229:50: warning: unused parameter 'key' [-Wunused-parameter]
- int32_t HksCryptoHalVerify(const struct HksBlob *key, const struct HksUsageSpec *usageSpec,
-                                                  ^~~
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:230:27: warning: unused parameter 'message' [-Wunused-parameter]
-     const struct HksBlob *message, const struct HksBlob *signature)
-                           ^~~~~~~
-../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:230:58: warning: unused parameter 'signature' [-Wunused-parameter]
-     const struct HksBlob *message, const struct HksBlob *signature)
-                                                          ^~~~~~~~~
-[199/334] gcc cross compiler obj/base/startup/syspara_lite/frameworks/parameter/src/libsysparam.parameter_common.o
-../../../base/startup/syspara_lite/frameworks/parameter/src/parameter_common.c: In function 'GetSha256Value':
-../../../base/startup/syspara_lite/frameworks/parameter/src/parameter_common.c:274:41: warning: pointer targets in passing argument 2 of 'mbedtls_sha256_update_ret' differ in signedness [-Wpointer-sign]
-     mbedtls_sha256_update_ret(&context, input, strlen(input));
-                                         ^~~~~
-In file included from ../../../base/startup/syspara_lite/frameworks/parameter/src/parameter_common.c:22:0:
-../../../third_party/mbedtls/include/mbedtls/sha256.h:148:5: note: expected 'const unsigned char *' but argument is of type 'const char *'
- int mbedtls_sha256_update_ret( mbedtls_sha256_context *ctx,
-     ^~~~~~~~~~~~~~~~~~~~~~~~~
-[200/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiaware/source/libhal_wifiaware.hal_wifiaware.o
-[201/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_uart.o
-[202/334] STAMP obj/domains/iot/link/link.stamp
-[203/334] gcc cross compiler obj/base/update/ota_lite/frameworks/source/updater/libhota.hota_updater.o
+[182/337] STAMP obj/base/startup/syspara_lite/frameworks/token/token_notes.stamp
+[183/337] gcc cross compiler obj/base/update/ota_lite/frameworks/source/updater/libhota.hota_updater.o
 In file included from ../../../base/update/ota_lite/frameworks/source/updater/hota_updater.c:23:0:
 ../../../base/update/ota_lite/hals/hal_hota_board.h:111:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
  const ComponentTableInfo *HotaHalGetPartitionInfo();
@@ -716,15 +666,66 @@ In file included from ../../../device/hisilicon/hispark_pegasus/sdk_liteos/platf
 ../../../base/update/ota_lite/frameworks/source/updater/hota_updater.c:598:21: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
      g_otaComponents = HotaHalGetPartitionInfo();
                      ^
-[204/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_reset.o
-[205/334] STAMP obj/domains/iot/link/iot.stamp
-[206/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_pwm.o
-[207/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_watchdog.o
-[208/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/utils/file/src/libhal_file_static.hal_file.o
-[209/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_lowpower.o
-[210/334] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.auth_conn.o
-[211/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.libc.o
-[212/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/update/libhal_update_static.hal_hota_board.o
+[184/337] gcc cross compiler obj/base/update/ota_lite/frameworks/source/verify/libhota.app_sha256.o
+[185/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_ecdh.o
+[186/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_rsa.o
+[187/337] gcc cross compiler obj/base/startup/bootstrap_lite/services/source/libbootstrap.system_init.o
+[188/337] gcc cross compiler obj/base/update/ota_lite/frameworks/source/verify/libhota.hota_verify.o
+In file included from ../../../base/update/ota_lite/frameworks/source/verify/hota_verify.c:21:0:
+../../../base/update/ota_lite/hals/hal_hota_board.h:111:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
+ const ComponentTableInfo *HotaHalGetPartitionInfo();
+ ^~~~~
+[189/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_hmac.o
+[190/337] gcc cross compiler obj/base/startup/bootstrap_lite/services/source/libbootstrap.bootstrap_service.o
+[191/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_kdf.o
+[192/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_hash.o
+[193/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_ecdsa.o
+[194/337] gcc cross compiler obj/base/startup/syspara_lite/frameworks/parameter/src/libsysparam.parameter_common.o
+../../../base/startup/syspara_lite/frameworks/parameter/src/parameter_common.c: In function 'GetSha256Value':
+../../../base/startup/syspara_lite/frameworks/parameter/src/parameter_common.c:274:41: warning: pointer targets in passing argument 2 of 'mbedtls_sha256_update_ret' differ in signedness [-Wpointer-sign]
+     mbedtls_sha256_update_ret(&context, input, strlen(input));
+                                         ^~~~~
+In file included from ../../../base/startup/syspara_lite/frameworks/parameter/src/parameter_common.c:22:0:
+../../../third_party/mbedtls/include/mbedtls/sha256.h:148:5: note: expected 'const unsigned char *' but argument is of type 'const char *'
+ int mbedtls_sha256_update_ret( mbedtls_sha256_context *ctx,
+     ^~~~~~~~~~~~~~~~~~~~~~~~~
+[195/337] STAMP obj/device/hisilicon/hispark_pegasus/hispark_pegasus.stamp
+[196/337] STAMP obj/build/lite/config/component/cJSON/cjson_shared.stamp
+[197/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_engine.o
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c: In function 'HksCryptoHalSign':
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:207:48: warning: unused parameter 'key' [-Wunused-parameter]
+ int32_t HksCryptoHalSign(const struct HksBlob *key, const struct HksUsageSpec *usageSpec,
+                                                ^~~
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:208:27: warning: unused parameter 'message' [-Wunused-parameter]
+     const struct HksBlob *message, struct HksBlob *signature)
+                           ^~~~~~~
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:208:52: warning: unused parameter 'signature' [-Wunused-parameter]
+     const struct HksBlob *message, struct HksBlob *signature)
+                                                    ^~~~~~~~~
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c: In function 'HksCryptoHalVerify':
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:229:50: warning: unused parameter 'key' [-Wunused-parameter]
+ int32_t HksCryptoHalVerify(const struct HksBlob *key, const struct HksUsageSpec *usageSpec,
+                                                  ^~~
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:230:27: warning: unused parameter 'message' [-Wunused-parameter]
+     const struct HksBlob *message, const struct HksBlob *signature)
+                           ^~~~~~~
+../../../base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/hks_mbedtls_engine.c:230:58: warning: unused parameter 'signature' [-Wunused-parameter]
+     const struct HksBlob *message, const struct HksBlob *signature)
+                                                          ^~~~~~~~~
+[198/337] gcc cross compiler obj/base/security/huks/frameworks/huks_standard/main/crypto_engine/mbedtls/src/libhuks_3.0_sdk.hks_mbedtls_x25519.o
+[199/337] gcc cross compiler obj/base/startup/syspara_lite/frameworks/parameter/src/param_impl_hal/libsysparam.param_impl_hal.o
+[200/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_lowpower.o
+[201/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_reset.o
+[202/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_watchdog.o
+[203/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/utils/file/src/libhal_file_static.hal_file.o
+[204/337] STAMP obj/domains/iot/link/link.stamp
+[205/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiaware/source/libhal_wifiaware.hal_wifiaware.o
+[206/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_pwm.o
+[207/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.libc.o
+[208/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_uart.o
+[209/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_flash.o
+[210/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/libwifiservice.wifi_device_util.o
+[211/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/update/libhal_update_static.hal_hota_board.o
 In file included from ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/update/hal_hota_board.c:16:0:
 ../../../base/update/ota_lite/hals/hal_hota_board.h:111:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
  const ComponentTableInfo *HotaHalGetPartitionInfo();
@@ -748,7 +749,14 @@ In file included from ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/h
 ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/update/hal_hota_board.c:206:13: warning: implicit declaration of function 'strncmp' [-Wimplicit-function-declaration]
      return (strncmp(currentVersion, pkgVersion, pkgVersionLength) == 0) ? 1 : 0;
              ^~~~~~~
-[213/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/libwifiservice.wifi_hotspot.o
+[212/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_i2c.o
+../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_iot_i2c.c: In function 'IoTI2cWrite':
+../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/hal_iot_i2c.c:25:22: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+     i2cData.send_buf = data;
+                      ^
+[213/337] STAMP obj/domains/iot/link/iot.stamp
+[214/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/iot_hardware/wifiiot_lite/libhal_iothardware.hal_iot_gpio.o
+[215/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/libwifiservice.wifi_hotspot.o
 ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_hotspot.c: In function 'GetPeerSTAWifiIp':
 ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_hotspot.c:236:52: warning: passing argument 2 of 'netifapi_dhcps_get_client_ip' discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
      ret = netifapi_dhcps_get_client_ip(netif_node, macAddress, macLen, &clientIP);
@@ -764,15 +772,14 @@ In file included from ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/h
 ../../../device/hisilicon/hispark_pegasus/sdk_liteos/third_party/lwip_sack/include/lwip/netifapi.h:1155:7: note: expected 'ip_addr_t * {aka struct ip_addr *}' but argument is of type 'ip4_addr_t * {aka struct ip4_addr *}'
  err_t netifapi_dhcps_get_client_ip(struct netif *netif, u8_t *mac, u8_t maclen, ip_addr_t *ip);
        ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-[214/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.time.o
-[215/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.file.o
-[216/334] gcc cross compiler obj/third_party/cJSON/libcjson_static.cJSON_Utils.o
-[217/334] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.bus_manager.o
-[218/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.pthread_attr.o
-[219/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.pthread.o
-[220/334] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.msg_get_deviceid.o
-[221/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/cmsis/libcmsis.cmsis_liteos.o
-[222/334] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/libwifiservice.wifi_device.o
+[216/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/cmsis/libcmsis.cmsis_liteos.o
+[217/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.file.o
+[218/337] gcc cross compiler obj/third_party/cJSON/libcjson_static.cJSON_Utils.o
+[219/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.pthread_attr.o
+[220/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.pthread.o
+[221/337] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.auth_conn.o
+[222/337] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.msg_get_deviceid.o
+[223/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/libwifiservice.wifi_device.o
 ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_device.c:41:5: warning: braces around scalar initializer
      {0}, {0}, {0}, 0, WIFI_CONFIG_INVALID, 0, 0, UNKNOWN, {0, 0, {0, 0}, 0}
      ^
@@ -836,112 +843,114 @@ In file included from ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/h
 ../../../device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/source/wifi_device.c:847:12: note: expected 'int * const' but argument is of type 'unsigned int *'
  static int GetLocalWifiIp(int * const ip)
             ^~~~~~~~~~~~~~
-[223/334] gcc cross compiler obj/third_party/cJSON/libcjson_static.cJSON.o
-[224/334] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.auth_interface.o
-[225/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.nstackx_device.o
-[226/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.json_payload.o
-[227/334] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.wifi_auth_manager.o
-[228/334] gcc cross compiler obj/foundation/communication/softbus_lite/os_adapter/source/L0/libdiscovery.os_adapter.o
-[229/334] COPY ../../../foundation/distributedschedule/samgr_lite/config/system_capability.json obj/foundation/distributedschedule/samgr_lite/config/system_capability.json
-[230/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/discovery_service/source/libdiscovery.discovery_service.o
-[231/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.coap_adapter.o
-[232/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.trans_lock.o
-[233/334] STAMP obj/foundation/distributedschedule/samgr_lite/ConfigFiles.stamp
-[234/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.tcp_session.o
-[235/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.nstackx_common.o
-[236/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.coap_socket.o
-[237/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/discovery_service/source/libdiscovery.coap_service.o
-[238/334] gcc cross compiler obj/foundation/communication/wifi_aware/frameworks/source/libwifiaware.wifiaware.o
-[239/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/utils/libtrans_service.message.o
-[240/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/utils/libtrans_service.aes_gcm.o
-[241/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/discovery_service/source/libdiscovery.common_info_manager.o
-[242/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.auth_conn_manager.o
-[243/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.thread_adapter.o
-[244/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.time_adapter.o
-[245/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/communication/broadcast/source/libbroadcast.pub_sub_feature.o
-[246/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/utils/libtrans_service.tcp_socket.o
-[247/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/communication/broadcast/source/libbroadcast.broadcast_service.o
-[248/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/registry/libsamgr.service_registry.o
-[249/334] STAMP obj/prebuilts/lite/sysroot/sysroot.stamp
-[250/334] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.coap_discover.o
-[251/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.queue_adapter.o
-[252/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.memory_adapter.o
-[253/334] STAMP obj/vendor/hisilicon/hispark_pegasus/hispark_pegasus.stamp
-[254/334] STAMP obj/build/lite/prebuilts.stamp
-[255/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.iunknown.o
-[256/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.feature.o
-[257/334] STAMP obj/build/lite/product.stamp
-[258/334] STAMP obj/applications/sample/wifi-iot/app/startup/startup.stamp
-[259/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.common.o
-[260/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/communication/broadcast/source/libbroadcast.pub_sub_implement.o
-[261/334] gcc cross compiler obj/utils/native/lite/file/src/file_impl_hal/libnative_file.file.o
-[262/334] AR libs/libhiview_lite.a
-[263/334] AR libs/libcjson_static.a
-[264/334] AR libs/libappDemoIot.a
-[265/334] gcc cross compiler obj/utils/native/lite/kv_store/src/kvstore_common/libutils_kv_store.kvstore_common.o
-[266/334] AR libs/libhal_wifiaware.a
-[267/334] AR libs/libbootstrap.a
-[268/334] AR libs/libwifiservice.a
-[269/334] AR libs/libhal_iothardware.a
-[270/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.message.o
-[271/334] AR libs/libhilog_lite.a
-[272/334] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.tcp_session_manager.o
-[273/334] STAMP obj/build/lite/config/component/cJSON/cjson_ndk.stamp
-[274/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr.samgr_lite.o
-[275/334] STAMP obj/applications/sample/wifi-iot/app/app.stamp
-[276/334] AR libs/libhal_update_static.a
-[277/334] gcc cross compiler obj/utils/native/lite/kv_store/src/kvstore_impl_hal/libutils_kv_store.kv_store.o
-[278/334] AR libs/libhuks_3.0_sdk.a
-[279/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.service.o
-[280/334] gcc cross compiler obj/vendor/hisilicon/hispark_pegasus/hals/utils/token/libhal_token_static.hal_token.o
-[281/334] AR libs/libhal_file_static.a
-[282/334] AR libs/libcmsis.a
-[283/334] gcc cross compiler obj/vendor/hisilicon/hispark_pegasus/hals/utils/sys_param/libhal_sysparam.hal_sys_param.o
+[224/337] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.bus_manager.o
+[225/337] gcc cross compiler obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/posix/src/libposix.time.o
+[226/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.coap_socket.o
+[227/337] COPY ../../../foundation/distributedschedule/samgr_lite/config/system_capability.json obj/foundation/distributedschedule/samgr_lite/config/system_capability.json
+[228/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.json_payload.o
+[229/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.common.o
+[230/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.coap_adapter.o
+[231/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/discovery_service/source/libdiscovery.coap_service.o
+[232/337] gcc cross compiler obj/third_party/cJSON/libcjson_static.cJSON.o
+[233/337] STAMP obj/foundation/distributedschedule/samgr_lite/ConfigFiles.stamp
+[234/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.nstackx_common.o
+[235/337] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.wifi_auth_manager.o
+[236/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.coap_discover.o
+[237/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/utils/libtrans_service.message.o
+[238/337] gcc cross compiler obj/foundation/communication/softbus_lite/authmanager/source/libauthmanager.auth_interface.o
+[239/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/coap/source/libdiscovery.nstackx_device.o
+[240/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/discovery_service/source/libdiscovery.common_info_manager.o
+[241/337] gcc cross compiler obj/foundation/communication/softbus_lite/os_adapter/source/L0/libdiscovery.os_adapter.o
+[242/337] gcc cross compiler obj/foundation/communication/softbus_lite/discovery/discovery_service/source/libdiscovery.discovery_service.o
+[243/337] gcc cross compiler obj/foundation/communication/wifi_aware/frameworks/source/libwifiaware.wifiaware.o
+[244/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.thread_adapter.o
+[245/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.trans_lock.o
+[246/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.tcp_session.o
+[247/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/communication/broadcast/source/libbroadcast.pub_sub_feature.o
+[248/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/utils/libtrans_service.aes_gcm.o
+[249/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/registry/libsamgr.service_registry.o
+[250/337] STAMP obj/prebuilts/lite/sysroot/sysroot.stamp
+[251/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.auth_conn_manager.o
+[252/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/communication/broadcast/source/libbroadcast.broadcast_service.o
+[253/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/communication/broadcast/source/libbroadcast.pub_sub_implement.o
+[254/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.memory_adapter.o
+[255/337] STAMP obj/vendor/hisilicon/hispark_pegasus/hispark_pegasus.stamp
+[256/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.queue_adapter.o
+[257/337] STAMP obj/build/lite/prebuilts.stamp
+[258/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/adapter/cmsis/libsamgr_adapter.time_adapter.o
+[259/337] STAMP obj/build/lite/product.stamp
+[260/337] STAMP obj/applications/sample/wifi-iot/app/startup/startup.stamp
+[261/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.iunknown.o
+[262/337] gcc cross compiler obj/utils/native/lite/kv_store/src/kvstore_impl_hal/libutils_kv_store.kv_store.o
+[263/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/utils/libtrans_service.tcp_socket.o
+[264/337] AR libs/libhiview_lite.a
+[265/337] AR libs/libbootstrap.a
+[266/337] AR libs/libhal_file_static.a
+[267/337] gcc cross compiler obj/foundation/communication/softbus_lite/trans_service/source/libdistbus/libtrans_service.tcp_session_manager.o
+[268/337] AR libs/libappDemoIot.a
+[269/337] AR libs/libhal_iothardware.a
+[270/337] AR libs/libhal_update_static.a
+[271/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.task_manager.o
+[272/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr.samgr_lite.o
+[273/337] AR libs/libhilog_lite.a
+[274/337] AR libs/libhal_wifiaware.a
+[275/337] AR libs/libwifiservice.a
+[276/337] AR libs/libcjson_static.a
+[277/337] STAMP obj/applications/sample/wifi-iot/app/app.stamp
+[278/337] gcc cross compiler obj/utils/native/lite/file/src/file_impl_hal/libnative_file.file.o
+[279/337] STAMP obj/base/iot_hardware/peripheral/iothardware_ndk.stamp
+[280/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.feature.o
+[281/337] STAMP obj/base/iot_hardware/peripheral/iothardware.stamp
+[282/337] AR libs/libhuks_3.0_sdk.a
+[283/337] gcc cross compiler obj/utils/native/lite/kv_store/src/kvstore_common/libutils_kv_store.kvstore_common.o
+[284/337] AR libs/libposix.a
+[285/337] AR libs/libcmsis.a
+[286/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.message.o
+[287/337] STAMP obj/base/hiviewdfx/hilog_lite/frameworks/mini/hilog_lite_ndk.stamp
+[288/337] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.service.o
+[289/337] AR libs/libauthmanager.a
+[290/337] STAMP obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/wifiservice_ndk.stamp
+[291/337] gcc cross compiler obj/vendor/hisilicon/hispark_pegasus/hals/utils/token/libhal_token_static.hal_token.o
+[292/337] STAMP obj/build/lite/config/component/cJSON/cjson_ndk.stamp
+[293/337] gcc cross compiler obj/vendor/hisilicon/hispark_pegasus/hals/utils/sys_param/libhal_sysparam.hal_sys_param.o
 ../../../vendor/hisilicon/hispark_pegasus/hals/utils/sys_param/hal_sys_param.c:33:19: warning: 'EMPTY_STR' defined but not used [-Wunused-const-variable=]
  static const char EMPTY_STR[] = {""};
                    ^~~~~~~~~
-[284/334] STAMP obj/device/hisilicon/hispark_pegasus/hi3861_adapter/hals/communication/wifi_lite/wifiservice/wifiservice_ndk.stamp
-[285/334] STAMP obj/base/iot_hardware/peripheral/iothardware_ndk.stamp
-[286/334] gcc cross compiler obj/foundation/distributedschedule/samgr_lite/samgr/source/libsamgr_source.task_manager.o
-[287/334] STAMP obj/base/iot_hardware/peripheral/iothardware.stamp
-[288/334] STAMP obj/base/hiviewdfx/hilog_lite/frameworks/mini/hilog_lite_ndk.stamp
-[289/334] AR libs/libposix.a
-[290/334] AR libs/libauthmanager.a
-[291/334] AR libs/libdiscovery.a
-[292/334] AR libs/libwifiaware.a
-[293/334] AR libs/libtrans_service.a
-[294/334] STAMP obj/foundation/communication/wifi_lite/wifi.stamp
-[295/334] AR libs/libhichainsdk.a
-[296/334] STAMP obj/base/security/huks/frameworks/huks_lite/huks_sdk.stamp
-[297/334] AR libs/libsamgr_adapter.a
-[298/334] AR libs/libbroadcast.a
-[299/334] AR libs/libnative_file.a
-[300/334] AR libs/libutils_kv_store.a
-[301/334] AR libs/libhal_sysparam.a
-[302/334] AR libs/libhal_token_static.a
-[303/334] STAMP obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/kal.stamp
-[304/334] STAMP obj/foundation/communication/softbus_lite/discovery_ndk.stamp
-[305/334] STAMP obj/foundation/communication/softbus_lite/trans_service_ndk.stamp
-[306/334] STAMP obj/foundation/communication/softbus_lite/softbus.stamp
-[307/334] STAMP obj/base/security/deviceauth/frameworks/deviceauth_lite/hichainsdk.stamp
-[308/334] AR libs/libsamgr_source.a
-[309/334] STAMP obj/utils/native/lite/file/file.stamp
-[310/334] STAMP obj/utils/native/lite/kv_store/kv_store.stamp
-[311/334] STAMP obj/utils/native/lite/native_api.stamp
-[312/334] AR libs/libsysparam.a
-[313/334] AR libs/libtoken_static.a
-[314/334] STAMP obj/device/hisilicon/hispark_pegasus/sdk_liteos/sdk.stamp
-[315/334] STAMP obj/foundation/communication/softbus_lite/softbus_lite_ndk.stamp
-[316/334] AR libs/libsamgr.a
-[317/334] AR libs/libhota.a
-[318/334] STAMP obj/base/startup/syspara_lite/frameworks/parameter/parameter.stamp
-[319/334] STAMP obj/base/startup/syspara_lite/frameworks/parameter/parameter_notes.stamp
-[320/334] STAMP obj/base/startup/syspara_lite/frameworks/token/token.stamp
-[321/334] STAMP obj/device/hisilicon/hispark_pegasus/sdk_liteos/wifiiot_sdk.stamp
-[322/334] STAMP obj/foundation/distributedschedule/samgr_lite/samgr_lite_ndk.stamp
-[323/334] STAMP obj/foundation/distributedschedule/samgr_lite/samgr.stamp
-[324/334] STAMP obj/base/update/ota_lite/frameworks/ota_lite.stamp
-[325/334] gcc cross compiler obj/utils/native/lite/os_dump/libdump_static.dump_syspara.o
+[294/337] AR libs/libwifiaware.a
+[295/337] AR libs/libdiscovery.a
+[296/337] AR libs/libtrans_service.a
+[297/337] STAMP obj/foundation/communication/wifi_lite/wifi.stamp
+[298/337] AR libs/libbroadcast.a
+[299/337] AR libs/libhichainsdk.a
+[300/337] STAMP obj/base/security/huks/frameworks/huks_lite/huks_sdk.stamp
+[301/337] AR libs/libsamgr_adapter.a
+[302/337] STAMP obj/device/hisilicon/hispark_pegasus/hi3861_adapter/kal/kal.stamp
+[303/337] AR libs/libnative_file.a
+[304/337] AR libs/libutils_kv_store.a
+[305/337] AR libs/libhal_token_static.a
+[306/337] AR libs/libhal_sysparam.a
+[307/337] STAMP obj/foundation/communication/softbus_lite/discovery_ndk.stamp
+[308/337] STAMP obj/foundation/communication/softbus_lite/softbus.stamp
+[309/337] STAMP obj/foundation/communication/softbus_lite/trans_service_ndk.stamp
+[310/337] STAMP obj/base/security/deviceauth/frameworks/deviceauth_lite/hichainsdk.stamp
+[311/337] AR libs/libsamgr_source.a
+[312/337] STAMP obj/device/hisilicon/hispark_pegasus/sdk_liteos/sdk.stamp
+[313/337] STAMP obj/utils/native/lite/file/file.stamp
+[314/337] STAMP obj/utils/native/lite/kv_store/kv_store.stamp
+[315/337] STAMP obj/utils/native/lite/native_api.stamp
+[316/337] AR libs/libtoken_static.a
+[317/337] AR libs/libsysparam.a
+[318/337] STAMP obj/foundation/communication/softbus_lite/softbus_lite_ndk.stamp
+[319/337] AR libs/libsamgr.a
+[320/337] STAMP obj/device/hisilicon/hispark_pegasus/sdk_liteos/wifiiot_sdk.stamp
+[321/337] STAMP obj/base/startup/syspara_lite/frameworks/token/token.stamp
+[322/337] STAMP obj/base/startup/syspara_lite/frameworks/parameter/parameter_notes.stamp
+[323/337] STAMP obj/base/startup/syspara_lite/frameworks/parameter/parameter.stamp
+[324/337] AR libs/libhota.a
+[325/337] STAMP obj/foundation/distributedschedule/samgr_lite/samgr.stamp
+[326/337] STAMP obj/foundation/distributedschedule/samgr_lite/samgr_lite_ndk.stamp
+[327/337] STAMP obj/base/update/ota_lite/frameworks/ota_lite.stamp
+[328/337] gcc cross compiler obj/utils/native/lite/os_dump/libdump_static.dump_syspara.o
 In file included from ../../../utils/native/lite/os_dump/dump_syspara.c:16:0:
 ../../../utils/native/lite/os_dump/dump_syspara.h:21:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
      char *(*getInfoValue)();
@@ -1056,12 +1065,12 @@ In file included from ../../../utils/native/lite/os_dump/dump_syspara.c:16:0:
 ../../../utils/native/lite/os_dump/dump_syspara.c:68:5: warning: function declaration isn't a prototype [-Wstrict-prototypes]
  int QuerySysparaCmd()
      ^~~~~~~~~~~~~~~
-[326/334] AR libs/libdump_static.a
-[327/334] STAMP obj/utils/native/lite/os_dump/utils_os_dump.stamp
-[328/334] STAMP obj/utils/native/lite/utils.stamp
-[329/334] AR libs/libdeviceauth_hal_liteos.a
-[330/334] AR libs/libdeviceauth.a
-[331/334] STAMP obj/base/security/deviceauth/deviceauth_lite.stamp
-[332/334] STAMP obj/build/lite/ohos.stamp
-[333/334] ACTION //device/hisilicon/hispark_pegasus/sdk_liteos:run_wifiiot_scons(//build/lite/toolchain:riscv32-unknown-elf)
-[334/334] STAMP obj/device/hisilicon/hispark_pegasus/sdk_liteos/run_wifiiot_scons.stamp
+[329/337] AR libs/libdump_static.a
+[330/337] STAMP obj/utils/native/lite/os_dump/utils_os_dump.stamp
+[331/337] STAMP obj/utils/native/lite/utils.stamp
+[332/337] AR libs/libdeviceauth_hal_liteos.a
+[333/337] AR libs/libdeviceauth.a
+[334/337] STAMP obj/base/security/deviceauth/deviceauth_lite.stamp
+[335/337] STAMP obj/build/lite/ohos.stamp
+[336/337] ACTION //device/hisilicon/hispark_pegasus/sdk_liteos:run_wifiiot_scons(//build/lite/toolchain:riscv32-unknown-elf)
+[337/337] STAMP obj/device/hisilicon/hispark_pegasus/sdk_liteos/run_wifiiot_scons.stamp

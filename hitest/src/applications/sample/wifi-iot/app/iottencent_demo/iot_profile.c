@@ -303,6 +303,10 @@ static char *MakeProfileReport(WeChatProfile *payload)
                             payload->reportAction.humidityActionData);
     cJSON_AddNumberToObject(reported, payload->reportAction.subDeviceActionLightIntensity,
                             payload->reportAction.lightIntensityActionData);
+    cJSON_AddNumberToObject(reported, payload->reportAction.subDeviceActionLatitude,
+                            payload->reportAction.latitude);
+    cJSON_AddNumberToObject(reported, payload->reportAction.subDeviceActionLongitude,
+                            payload->reportAction.longitude);
     ret = cJSON_PrintUnformatted(root);
     cJSON_Delete(state);
     cJSON_Delete(reported);
